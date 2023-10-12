@@ -1,6 +1,6 @@
 html {
     font-size: 62.5%;
-    }
+}
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",sans-serif;
@@ -10,7 +10,7 @@ body {
     color: white;
 }
 
-.todo-container {
+.app-container {
     display: flex;
     margin: 0 30px;
     justify-content: center;
@@ -24,7 +24,9 @@ header {
     
 }
 
-.todo-input {
+/* INPUTS */
+
+.input--todo {
     border-radius: 20px;
     border: 1px solid white;
     color: black;
@@ -38,23 +40,29 @@ header {
 }
 
 .input-group {
-    border: 1px solid white;
-    width: fill;
     width: 100%;
     max-width: 600px;
     border-radius: 20px;
     display: flex;
     background-color: white;
-
 }
 
-.input-group .todo-input {
+.input-group .input--todo {
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 1rem;
 }
 
-.todo-btn {
+/* BUTTONS */
+
+.btn {
+    background: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.btn--input {
     background: white;
     border: none;
     cursor: pointer;
@@ -65,5 +73,49 @@ header {
 .btn__icon {
     font-size: 4rem;
     color: #5A4FF3;
+}
+
+.btn--trash,
+.btn--check-mark {
+    font-size: 3rem;
+    color: #5A4FF3;
+    padding: 0 5px 0 2px;
+    line-height: 0;
+}
+
+/* TODO LIST */
+
+.todo {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    align-items:center;
+    flex-direction:row;
+    background: white;
+    color: black;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.todo-item {
+    font-size: 1.8rem;
+}
+
+.list--todo {
+    margin-top: 30px;
+    list-style: none;
+    width: auto;
+    max-width: 500px;
+}
+
+.ph-bold .ph-x-circle,
+.ph-bold .ph-check-circle {
+    pointer-events: none; /* zapobiegamy klikaniu w ikonę zamiast w btn */
+}
+
+.completed {
+    text-decoration: line-through;
 }
 

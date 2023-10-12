@@ -8,22 +8,20 @@
     <title>Todo list</title>
   </head>
   <body>
-    <div class="todo-container">
+    <div class="app-container">
       <header>
         <h1>To do:</h1>
       </header>
       <div class="input-group">
-        <input type="text" class="todo-input" placeholder="Any tasks?" />
-        <button class="todo-btn">
-          <i class="btn__icon fas fa-plus-square"></i>
+        <input type="text" class="input--todo" placeholder="Any tasks or things to buy?" />
+        <button class="btn--input">
+          <i class="btn__icon ph-bold ph-plus-circle"></i>
         </button>
       </div>
-      <ul class="todo-list"></ul>
+        <ul class="list--todo"></ul>
     </div>
-    <script
-      src="https://kit.fontawesome.com/874a0cbe2f.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="app.js"></script>
   </body>
 </html>
+
