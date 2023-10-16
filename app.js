@@ -6,10 +6,18 @@
 //Event Listeners
 document.addEventListener('DOMContentLoaded', getFromLocalStorage); //load after refreshing the website
 inputButton.addEventListener('click', addTodo);
+todoInput.addEventListener('keypress', enterTodo);
 todoList.addEventListener('click', deleteCheck);
 
-
 //Functions
+
+//enter todo by pressing enter key
+function enterTodo (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        inputButton.click();
+    }
+}
 
 function addTodo(event) {
     //prevent form from refreshing
