@@ -37,12 +37,22 @@ header {
     color: #cdcbd7;
 }
 
+input[type='text']:focus, /*zaznaczony*/
+input[type='email']:focus {
+
+}
+
 .input-group {
     width: 100%;
     max-width: 600px;
     border-radius: 20px;
     display: flex;
     background-color: white;
+}
+
+.input-group-focused {
+    border-color: #5A4FF3;
+    box-shadow: 0 0 0 4px rgba(90, 79, 243, 0.25);
 }
 
 .input-group .input--todo {

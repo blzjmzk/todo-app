@@ -2,21 +2,35 @@
  const todoInput = document.querySelector('.input--todo');
  const inputButton = document.querySelector('.btn--input');
  const todoList = document.querySelector('.list--todo');
+ const inputGroup = document.querySelector('.input-group');
 
 //Event Listeners
-document.addEventListener('DOMContentLoaded', getFromLocalStorage); //load after refreshing the website
+document.addEventListener('DOMContentLoaded', getFromLocalStorage); //load  storage after refreshing the website
+document.addEventListener('DOMContentLoaded', colorInputBorder); //color input group border after refreshing the website
 inputButton.addEventListener('click', addTodo);
-todoInput.addEventListener('keypress', enterTodo);
 todoList.addEventListener('click', deleteCheck);
+todoInput.addEventListener('keypress', enterTodo);
+todoInput.addEventListener('focus', colorInputBorder);
+todoInput.addEventListener('blur', uncolorInputBorder);
 
 //Functions
 
 //enter todo by pressing enter key
 function enterTodo (event) {
     if (event.key === "Enter") {
-        event.preventDefault();
+        if (todoInput.value !== "") {
         inputButton.click();
+        }
     }
+}
+
+//coloring input group border when focusing
+function colorInputBorder (event) {
+    inputGroup.classList.add('input-group-focused');
+}
+//uncoloring inputgrop when not
+function uncolorInputBorder (event) {
+    inputGroup.classList.remove('input-group-focused');
 }
 
 function addTodo(event) {
