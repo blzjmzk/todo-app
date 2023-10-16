@@ -37,11 +37,6 @@ header {
     color: #cdcbd7;
 }
 
-input[type='text']:focus, /*zaznaczony*/
-input[type='email']:focus {
-
-}
-
 .input-group {
     width: 100%;
     max-width: 600px;
@@ -82,7 +77,6 @@ input[type='email']:focus {
 }
 
 .btn--empty-checkmark,
-.btn--done-checkmark,
 .btn--trash {
     font-size: 3rem;
     color: #5A4FF3;
@@ -95,16 +89,12 @@ input[type='email']:focus {
 .todo {
     display: flex;
     width: fit-content;
-    align-items: center;
+    align-items:center;
     margin-bottom: 20px;
     border-radius: 20px;
-    align-items: center;
     background: white;
     opacity: 0.8;
     color: black;
-
-    
-
 }
 
 .todo-item {
@@ -121,10 +111,10 @@ input[type='email']:focus {
 
 }
 
-
 .ph-x-circle,
-.ph-circle {
-    pointer-events: none; /* zapobiegamy klikaniu w ikonę zamiast w btn */
+.ph-circle,
+.ph-check-circle {
+    pointer-events: none; /*avoiding clicking icon insted of btn */
 }
 
 .completed {

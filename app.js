@@ -71,20 +71,25 @@ function addTodo(event) {
 
 function deleteCheck (event) {
     const item = event.target;
+    const checkIcon = item.children[0];
+    const todoText = item.nextElementSibling;
+
     //delete todo
     if (item.classList.contains('btn--trash')) {
         const todo = item.parentElement;
         todo.remove();
     }
 
-    //check todo
-    if (item.classList.contains('btn--empty-checkmark')) {
-        const todoText = item.nextElementSibling;
-        todoText.classList.add('completed');
-    
-        const checkIcon = item.children[0];
-        checkIcon.classList.remove('ph-circle');
+    //toggle check mark
+    if (checkIcon.classList.contains('ph-circle')) {
+        todoText.classList.add('completed'); //text crossing out
+        checkIcon.classList.remove('ph-circle'); //icon change
         checkIcon.classList.add('ph-check-circle');
+    }
+    else if (checkIcon.classList.contains('ph-check-circle')) {
+        todoText.classList.remove('completed'); //text crossing out
+        checkIcon.classList.remove('ph-check-circle'); //icon change
+        checkIcon.classList.add('ph-circle');
     }
 }
 
