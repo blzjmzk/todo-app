@@ -67,9 +67,11 @@ header {
 
 .btn--input {
     background: white;
+    display: flex;
+    align-items: center;
     border: none;
     cursor: pointer;
-    padding: 0 10px 0 0;
+    padding: 0 5px 0 0;
     border-radius: 20px;
     font-size: 4rem;
     color: #5A4FF3;
@@ -80,7 +82,7 @@ header {
 .btn--trash {
     font-size: 3rem;
     color: #5A4FF3;
-    padding: 0 5px 0 2px;
+    padding: 0 2px;
     line-height: 0;
 }
 
@@ -88,8 +90,9 @@ header {
 
 .todo {
     display: flex;
-    width: fit-content;
+    width: 400px;
     align-items:center;
+    justify-content: space-between;
     margin-bottom: 20px;
     border-radius: 20px;
     background: white;
@@ -99,6 +102,7 @@ header {
 
 .todo-item {
     font-size: 1.8rem;
+
 }
 
 .list--todo {
@@ -108,7 +112,6 @@ header {
     max-width: 500px;
     overflow: hidden;
     padding-left: 0;
-
 }
 
 .ph-x-circle,
