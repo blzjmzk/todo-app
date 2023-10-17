@@ -45,6 +45,14 @@ header {
     background-color: white;
 }
 
+.input--edit {
+    border: none;
+}
+
+.input--edit:focus {
+    outline-style: none;
+}
+
 .input-group-focused {
     border-color: #5A4FF3;
     box-shadow: 0 0 0 4px rgba(90, 79, 243, 0.25);

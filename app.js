@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', getFromLocalStorage); //load  stor
 document.addEventListener('DOMContentLoaded', colorInputBorder); //color input group border after refreshing the website
 inputButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
+todoList.addEventListener('click', editTodo);
 todoInput.addEventListener('keypress', enterTodo);
 todoInput.addEventListener('focus', colorInputBorder);
 todoInput.addEventListener('blur', uncolorInputBorder);
@@ -73,12 +74,11 @@ function addTodo(event) {
         todoInput.value = '';
     }   
 }
-
+//deleting and (un)checking the todo
 function deleteCheck (event) {
     const item = event.target;
     const icon = item.children[0];
     const todoText = item.nextElementSibling;
-    const listItems = todoList.getElementsByTagName('li');
 
     //deleting todo
     if (item.classList.contains('btn--trash')) {
@@ -101,6 +101,27 @@ function deleteCheck (event) {
     }
 }
 
+//editing todo
+function editTodo (event) {
+    const item = event.target;
+
+    if (item.classList.contains('todo-item')) {
+        oldValue = item.innerText;
+        item.innerHTML = '<input class="input--edit" type="text" placeholder="Click to edit..." autofocus/>';
+        const editedInput = item.querySelector('.input--edit')
+
+        editedInput.addEventListener('blur', function () {
+            const newValue = editedInput.value;
+            item.innerHTML = newValue;
+            //updating the local storage
+            todos = JSON.parse(localStorage.getItem('todos'));
+            todos[todos.indexOf(oldValue)] = newValue;
+            localStorage.setItem('todos', JSON.stringify(todos));
+        });
+
+    }
+
+}
 
 //STORRING DATA LOCALLY
 
@@ -169,8 +190,10 @@ function removeLocalTodos(todo) {
         todos = JSON.parse(localStorage.getItem('todos'));
     }
 
-    const todoIndex = todo.children[1].innerText //getting index from the current li element, which is the second child of current todo div
-    todos.splice(todos.indexOf(todoIndex), 1); //removing todo
-    localStorage.setItem('todos', JSON.stringify(todos)); //updating the local storage
+    //getting index from the current li element, which is the second child of current todo div and removing todo
+    const todoIndex = todo.children[1].innerText 
+    todos.splice(todos.indexOf(todoIndex), 1); 
+    //updating the local storage
+    localStorage.setItem('todos', JSON.stringify(todos)); 
 }
 
