@@ -7,7 +7,7 @@
 - adding items on the top of the list
 - placing items on the bottom of the list when marking them as completed
 - adding todo items by enter key
-- site refreshing input autofocus
+- input autofocus after site refreshing 
 - icons used: [Phosphoricons](https://phosphoricons.com/)
 
 Icons' licence:
