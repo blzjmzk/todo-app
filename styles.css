@@ -51,6 +51,7 @@ header {
 
 .input-group {
   background-color: white;
+  opacity: 0.85;
   border-radius: 20px;
   display: flex;
   max-width: 600px;
@@ -116,12 +117,20 @@ header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  opacity: 0.8;
+  opacity: 0.85;
   width: 400px;
+}
+
+@media screen and (max-width: 480px) {
+  .todo {
+    width: 300px;
+  }
 }
 
 .todo-item {
   font-size: 1.8rem;
+  word-wrap: break-word;
+  max-width: 80%;
 }
 
 .list--todo {
