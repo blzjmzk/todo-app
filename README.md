@@ -1,4 +1,5 @@
-# Todo application 
+# Todo application
+
 - built in Vanilla Javascript & HTML/CSS
 - storing todo items in local storage in browser
 - removing todo items from local storage by clicking icon
@@ -7,13 +8,12 @@
 - adding items on the top of the list
 - placing items on the bottom of the list when marking them as completed
 - adding todo items by enter key
-- input autofocus after site refreshing 
+- input autofocus after site refreshing
 - icons used: [Phosphoricons](https://phosphoricons.com/)
 
 Icons' licence:
 
 MIT License
-
 Copyright (c) 2020 Phosphor Icons
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,7 +25,6 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -33,4 +32,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
